@@ -9,6 +9,6 @@ package model;
  *
  * @author David
  */
-public class FigurasGeometricas {
-    
+public abstract class FigurasGeometricas {
+    //hola buenas
 }
