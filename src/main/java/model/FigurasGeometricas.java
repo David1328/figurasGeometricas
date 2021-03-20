@@ -10,5 +10,18 @@ package model;
  * @author David
  */
 public abstract class FigurasGeometricas {
-    //hola buenas
+    
+    private String color;
+
+    public abstract float area();
+    public abstract String imprimir();
+    
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
 }
