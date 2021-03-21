@@ -5,6 +5,7 @@
  */
 package co.edu.unicundi.figurasgeometricas;
 
+import model.Circulo;
 import model.Rectangulo;
 import model.Triangulo;
 
@@ -26,6 +27,11 @@ public class Controller {
         datosRectangulo.setBase(7);
         
         System.out.println(datosRectangulo.imprimir());
+        
+        Circulo datosCirculo = new Circulo();
+        datosCirculo.setRadio(3);
+        
+        System.out.println(datosCirculo.imprimir());
         
     }
 }

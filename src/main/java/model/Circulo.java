@@ -9,6 +9,27 @@ package model;
  *
  * @author asantibo
  */
-public class Circulo {
+public class Circulo extends FigurasGeometricas{
+
+    private final double pi = Math.PI;
+    private float radio;
     
+    @Override
+    public float area() {
+        return ((float)this.pi*this.radio);
+    }
+
+    @Override
+    public String imprimir() {
+        return "El radio del circulo es: "+this.radio+"\nEl area del circulo es: "+this.area();
+    }  
+    
+    public float getRadio() {
+        return radio;
+    }
+
+    public void setRadio(float radio) {
+        this.radio = radio;
+    }
+
 }
