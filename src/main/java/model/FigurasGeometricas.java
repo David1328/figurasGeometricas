@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Scanner;
+
 /**
  *
  * @author David
@@ -16,6 +18,7 @@ public abstract class FigurasGeometricas {
     public abstract float area();
     public abstract String imprimir();
     public abstract void perdirDatos();
+    public static Scanner entrada = new Scanner(System.in);
     
     public String getColor() {
         return color;
