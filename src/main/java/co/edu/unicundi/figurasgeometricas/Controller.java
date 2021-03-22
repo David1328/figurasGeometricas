@@ -18,10 +18,13 @@ import model.Triangulo;
  * @author David
  */
 public class Controller {
+
     private static Scanner seleccionar = new Scanner(System.in);
     private static int valor;
     private static String desea;
+
     public static void main(String[] args) {
+        String opcion;
         /*Triangulo datosTriangulo = new Triangulo();
         
         datosTriangulo.setBase(4);
@@ -39,9 +42,15 @@ public class Controller {
         datosCirculo.perdirDatos();
         
         System.out.println(datosCirculo.imprimir());*/
-        mostrarFiguras();
+        do {
+            mostrarFiguras();
+            System.out.println("¿Desea ingresar otra opcion? (S/N)");
+            opcion = seleccionar.next();
+        } while (opcion.equalsIgnoreCase("S"));
+
     }
-    public static void mostrarFiguras(){
+
+    public static void mostrarFiguras() {
         FigurasGeometricas circulo = new Circulo();
         FigurasGeometricas rectangulo = new Rectangulo();
         FigurasGeometricas rombo = new Rombo();
@@ -54,7 +63,7 @@ public class Controller {
         System.out.println("4.Trapecio");
         System.out.println("5.Triangulo\n");
         valor = seleccionar.nextInt();
-        switch(valor){
+        switch (valor) {
             case 1:
                 //System.out.println("SI");
                 circulo.perdirDatos();
@@ -62,7 +71,8 @@ public class Controller {
                 break;
             case 2:
                 rectangulo.perdirDatos();
-                System.out.println(rectangulo.imprimir());;
+                System.out.println(rectangulo.imprimir());
+                ;
                 break;
             case 3:
                 rombo.perdirDatos();
@@ -78,6 +88,7 @@ public class Controller {
                 break;
             default:
                 System.out.println("Opcion no valida");
+                break;
         }
     }
 }

@@ -36,7 +36,10 @@ public class Triangulo extends FigurasGeometricas{
     
     @Override
     public void perdirDatos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Ingrese la base del triangulo");
+        this.base = entrada.nextFloat();
+        System.out.println("\nIngrese la altura del triangulo");
+        this.altura = entrada.nextFloat();
     }
     
     

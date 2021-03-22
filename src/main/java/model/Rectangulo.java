@@ -26,7 +26,10 @@ public class Rectangulo extends FigurasGeometricas{
     
     @Override
     public void perdirDatos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Ingrese la base del rectangulo");
+        this.base = entrada.nextFloat();
+        System.out.println("\nIngrese el altura del rectangulo");
+        this.altura = entrada.nextFloat();
     }
     
     public float getBase() {
