@@ -5,32 +5,35 @@
  */
 package model;
 
-
 /**
  *
  * @author asantibo
  */
-public class Circulo extends FigurasGeometricas{
+public class Circulo extends FigurasGeometricas {
 
     private final double pi = Math.PI;
     private float radio;
-    
+
     @Override
     public float area() {
-        return ((float)this.pi*this.radio);
+        return ((float) this.pi * this.radio);
     }
 
     @Override
     public String imprimir() {
-        return "El radio del circulo es: "+this.radio+"\nEl area del circulo es: "+this.area();
-    }  
-        
+        if (radio > 0) {
+            return "El radio del circulo es: " + this.radio + "\nEl area del circulo es: " + this.area();
+        } else {
+            return "Numeros no validos";
+        } 
+    }
+
     @Override
     public void perdirDatos() {
         System.out.println("Ingrese el radio del circulo");
         this.radio = entrada.nextFloat();
     }
-    
+
     public float getRadio() {
         return radio;
     }

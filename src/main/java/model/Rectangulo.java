@@ -9,7 +9,7 @@ package model;
  *
  * @author asantibo
  */
-public class Rectangulo extends FigurasGeometricas{
+public class Rectangulo extends FigurasGeometricas {
 
     private float base;
     private float altura;
@@ -18,12 +18,16 @@ public class Rectangulo extends FigurasGeometricas{
     public float area() {
         return (this.base * this.altura);
     }
-    
+
     @Override
-    public String imprimir(){
-        return "La base del rectangulo es: "+this.base+"\nLa altura del rectangulo es: "+this.altura+"\nEl area del rectangulo es: "+this.area();
-    } 
-    
+    public String imprimir() {
+        if (base > 0 && altura > 0) {
+            return "La base del rectangulo es: " + this.base + "\nLa altura del rectangulo es: " + this.altura + "\nEl area del rectangulo es: " + this.area();
+        } else {
+            return "Numeros no validos";
+        }
+    }
+
     @Override
     public void perdirDatos() {
         System.out.println("Ingrese la base del rectangulo");
@@ -31,7 +35,7 @@ public class Rectangulo extends FigurasGeometricas{
         System.out.println("\nIngrese el altura del rectangulo");
         this.altura = entrada.nextFloat();
     }
-    
+
     public float getBase() {
         return base;
     }
@@ -47,6 +51,5 @@ public class Rectangulo extends FigurasGeometricas{
     public void setAltura(float altura) {
         this.altura = altura;
     }
-    
 
 }

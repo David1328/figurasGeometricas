@@ -11,29 +11,33 @@ import java.util.Scanner;
  *
  * @author asantibo
  */
-public class Triangulo extends FigurasGeometricas{
+public class Triangulo extends FigurasGeometricas {
 
     private float base;
     private float altura;
 
     public Triangulo() {
     }
-    
+
     public Triangulo(float base, float altura) {
         this.base = base;
         this.altura = altura;
     }
-    
+
     @Override
     public float area() {
-        return ((this.base * this.altura) /2);
+        return ((this.base * this.altura) / 2);
     }
-    
+
     @Override
-    public String imprimir(){
-        return "La base del triangulo es: "+this.base+"\nLa altura del triangulo es: "+this.altura+" \nEl area del triangulo es: "+this.area();
-    } 
-    
+    public String imprimir() {
+        if (base > 0 && altura > 0) {
+            return "La base del triangulo es: " + this.base + "\nLa altura del triangulo es: " + this.altura + " \nEl area del triangulo es: " + this.area();
+        } else {
+            return "Numeros no validos";
+        }    
+    }
+
     @Override
     public void perdirDatos() {
         System.out.println("Ingrese la base del triangulo");
@@ -41,8 +45,7 @@ public class Triangulo extends FigurasGeometricas{
         System.out.println("\nIngrese la altura del triangulo");
         this.altura = entrada.nextFloat();
     }
-    
-    
+
     public float getBase() {
         return base;
     }
