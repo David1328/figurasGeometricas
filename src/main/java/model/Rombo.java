@@ -24,6 +24,10 @@ public class Rombo extends FigurasGeometricas{
     
     @Override
     public float area() {
+        if(validarNumeros(diagonalMayor, diagonalMenor)){
+            System.out.println("Dator erroneos");
+            return 0;
+        }
         return (diagonalMayor*diagonalMenor)/2;
     }
     
@@ -40,7 +44,13 @@ public class Rombo extends FigurasGeometricas{
     
     @Override
     public void perdirDatos() {
-        
+        System.out.println("Ingrese el valor de la diagonal mayor");
+        this.diagonalMayor= entrada.nextFloat();
+        System.out.println("Ingrese el valor de la diagonal menor");
+        this.diagonalMenor= entrada.nextFloat();
+        if(validarNumeros(diagonalMayor, diagonalMenor)){
+            System.out.println("Dator erroneos");
+        }
     }
     
     
