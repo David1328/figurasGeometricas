@@ -11,14 +11,18 @@ package model;
  */
 public class Rectangulo extends FigurasGeometricas {
 
+    //variable de base para emplear en la clase
     private float base;
+    //variable de altura para emplear en la clase
     private float altura;
 
+    //realiza la operacion para hallar el area
     @Override
     public float area() {
         return (this.base * this.altura);
     }
 
+    //muestra los resultados de las operaciones ya realizadas, es decir el area calculada
     @Override
     public String imprimir() {
         if (base > 0 && altura > 0) {
@@ -28,6 +32,7 @@ public class Rectangulo extends FigurasGeometricas {
         }
     }
 
+    //pide los datos para utilizarse en la clase
     @Override
     public void perdirDatos() {
         System.out.println("Ingrese la base del rectangulo");
@@ -36,18 +41,30 @@ public class Rectangulo extends FigurasGeometricas {
         this.altura = entrada.nextFloat();
     }
 
+    /**
+     * @return the base
+     */
     public float getBase() {
         return base;
     }
 
+    /**
+     * @param base the base to set
+     */
     public void setBase(float base) {
         this.base = base;
     }
 
+    /**
+     * @return the altura
+     */
     public float getAltura() {
         return altura;
     }
 
+    /**
+     * @param altura the altura to set
+     */
     public void setAltura(float altura) {
         this.altura = altura;
     }

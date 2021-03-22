@@ -14,11 +14,13 @@ public class Circulo extends FigurasGeometricas {
     private final double pi = Math.PI;
     private float radio;
 
+    //realiza la operacion para hallar el area
     @Override
     public float area() {
         return ((float) this.pi * this.radio);
     }
 
+    //muestra los resultados de las operaciones ya realizadas, es decir el area calculada
     @Override
     public String imprimir() {
         if (radio > 0) {
@@ -28,16 +30,23 @@ public class Circulo extends FigurasGeometricas {
         } 
     }
 
+    //pide los datos para utilizarse en la clase
     @Override
     public void perdirDatos() {
         System.out.println("Ingrese el radio del circulo");
         this.radio = entrada.nextFloat();
     }
 
+    /**
+     * @return the radio
+     */
     public float getRadio() {
         return radio;
     }
 
+    /**
+     * @param radio the radio to set
+     */
     public void setRadio(float radio) {
         this.radio = radio;
     }
