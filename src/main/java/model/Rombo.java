@@ -38,6 +38,12 @@ public class Rombo extends FigurasGeometricas{
         return diagonalMayor<diagonalMenor;
     }
     
+    @Override
+    public void perdirDatos() {
+        
+    }
+    
+    
     public float getDiagonalMayor() {
         return diagonalMayor;
     }
@@ -53,4 +59,5 @@ public class Rombo extends FigurasGeometricas{
     public void setDiagonalMenos(float diagonalMenos) {
         this.diagonalMenor = diagonalMenos;
     }
+
 }

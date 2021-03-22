@@ -29,7 +29,7 @@ public class Controller {
         System.out.println(datosRectangulo.imprimir());
         
         Circulo datosCirculo = new Circulo();
-        datosCirculo.setRadio(3);
+        datosCirculo.perdirDatos();
         
         System.out.println(datosCirculo.imprimir());
         

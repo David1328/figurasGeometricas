@@ -34,7 +34,12 @@ public class Triangulo extends FigurasGeometricas{
         return "La base del triangulo es: "+this.base+"\nLa altura del triangulo es: "+this.altura+" \nEl area del triangulo es: "+this.area();
     } 
     
- 
+    @Override
+    public void perdirDatos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     public float getBase() {
         return base;
     }

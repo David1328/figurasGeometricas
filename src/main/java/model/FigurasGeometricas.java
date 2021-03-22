@@ -15,6 +15,7 @@ public abstract class FigurasGeometricas {
 
     public abstract float area();
     public abstract String imprimir();
+    public abstract void perdirDatos();
     
     public String getColor() {
         return color;

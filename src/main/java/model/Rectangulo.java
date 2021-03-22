@@ -24,6 +24,11 @@ public class Rectangulo extends FigurasGeometricas{
         return "La base del rectangulo es: "+this.base+"\nLa altura del rectangulo es: "+this.altura+"\nEl area del rectangulo es: "+this.area();
     } 
     
+    @Override
+    public void perdirDatos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     public float getBase() {
         return base;
     }

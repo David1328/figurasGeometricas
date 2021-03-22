@@ -5,6 +5,8 @@
  */
 package model;
 
+import java.util.Scanner;
+
 /**
  *
  * @author asantibo
@@ -13,6 +15,7 @@ public class Circulo extends FigurasGeometricas{
 
     private final double pi = Math.PI;
     private float radio;
+    private static Scanner entrada = new Scanner(System.in);
     
     @Override
     public float area() {
@@ -23,6 +26,12 @@ public class Circulo extends FigurasGeometricas{
     public String imprimir() {
         return "El radio del circulo es: "+this.radio+"\nEl area del circulo es: "+this.area();
     }  
+    
+    @Override
+    public void perdirDatos() {
+        System.out.println("Ingrese el radio del circulo");
+        this.radio = entrada.nextFloat();
+    }
     
     public float getRadio() {
         return radio;

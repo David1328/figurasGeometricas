@@ -47,6 +47,11 @@ public class Trapecio extends FigurasGeometricas{
         return false;
     }
     
+    @Override
+    public void perdirDatos() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
     public float getBaseMenor() {
         return baseMenor;
     }
