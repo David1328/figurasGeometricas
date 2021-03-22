@@ -27,6 +27,10 @@ public class Trapecio extends FigurasGeometricas{
     
     @Override
     public float area() {
+        if(validarNumeros(baseMenor, baseMayor, altura)){
+            System.out.println("Valores no validos");
+            return 0;
+        }
         return (this.baseMayor+this.baseMenor/2)*this.altura;
     }
 
@@ -49,7 +53,15 @@ public class Trapecio extends FigurasGeometricas{
     
     @Override
     public void perdirDatos() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Ingresar la base mayor");
+        this.baseMayor = entrada.nextFloat();
+        System.out.println("Ingresar la base menor");
+        this.baseMenor = entrada.nextFloat();
+        System.out.println("Ingresar la altura");
+        this.altura = entrada.nextFloat();
+        if(validarNumeros(baseMenor, baseMayor, altura)){
+            System.out.println("Datos no validos");
+        }
     }
     
     public float getBaseMenor() {

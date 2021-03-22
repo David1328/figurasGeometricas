@@ -65,7 +65,6 @@ public class Controller {
         valor = seleccionar.nextInt();
         switch (valor) {
             case 1:
-                //System.out.println("SI");
                 circulo.perdirDatos();
                 System.out.println(circulo.imprimir());
                 break;
