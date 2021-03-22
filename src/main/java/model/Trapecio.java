@@ -31,7 +31,7 @@ public class Trapecio extends FigurasGeometricas{
             System.out.println("Valores no validos");
             return 0;
         }
-        return (this.baseMayor+this.baseMenor/2)*this.altura;
+        return ((this.baseMayor+this.baseMenor)/2)*this.altura;
     }
 
     @Override
