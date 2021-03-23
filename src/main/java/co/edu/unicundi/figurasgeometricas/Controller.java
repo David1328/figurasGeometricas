@@ -15,33 +15,18 @@ import model.Triangulo;
 
 /**
  *
- * @author David
+ * @author Santigo Bernal
+ * @author David Quintero
+ * @version 1.0.0
  */
 public class Controller {
-
+    //Se inicializan las variables a usar
     private static Scanner seleccionar = new Scanner(System.in);
     private static int valor;
     private static String desea;
 
     public static void main(String[] args) {
         String opcion;
-        /*Triangulo datosTriangulo = new Triangulo();
-        
-        datosTriangulo.setBase(4);
-        datosTriangulo.setAltura(3);
-        
-        System.out.println(datosTriangulo.imprimir());
-        
-        Rectangulo datosRectangulo = new Rectangulo();
-        datosRectangulo.setAltura(5);
-        datosRectangulo.setBase(7);
-        
-        System.out.println(datosRectangulo.imprimir());
-        
-        Circulo datosCirculo = new Circulo();
-        datosCirculo.perdirDatos();
-        
-        System.out.println(datosCirculo.imprimir());*/
         do {
             mostrarFiguras();
             System.out.println("¿Desea ingresar otra opcion? (S/N)");
@@ -49,7 +34,7 @@ public class Controller {
         } while (opcion.equalsIgnoreCase("S"));
 
     }
-
+    //Metodo estatico que permite solicitar datos para correr el programa
     public static void mostrarFiguras() {
         FigurasGeometricas circulo = new Circulo();
         FigurasGeometricas rectangulo = new Rectangulo();

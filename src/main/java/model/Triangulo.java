@@ -5,11 +5,11 @@
  */
 package model;
 
-import java.util.Scanner;
-
 /**
  *
- * @author asantibo
+ * @author Santigo Bernal
+ * @author David Quintero
+ * @version 1.0.0
  */
 public class Triangulo extends FigurasGeometricas {
 

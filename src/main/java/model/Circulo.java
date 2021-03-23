@@ -7,10 +7,12 @@ package model;
 
 /**
  *
- * @author asantibo
+ * @author Santigo Bernal
+ * @author David Quintero
+ * @version 1.0.0
  */
 public class Circulo extends FigurasGeometricas {
-
+    //Se inicializan las variables a usar
     private final double pi = Math.PI;
     private float radio;
 

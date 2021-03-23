@@ -9,23 +9,31 @@ import java.util.Scanner;
 
 /**
  *
- * @author David
+ * @author Santigo Bernal
+ * @author David Quintero
+ * @version 1.0.0
  */
 public abstract class FigurasGeometricas {
-    
-    private String color;
 
+    //Se crea la variable que se puede tener en común con las demas clases
+    private String color;
+    //Se crean los metodos que se van a implemetar en las demas clases
     public abstract float area();
     public abstract String imprimir();
     public abstract void perdirDatos();
     public static Scanner entrada = new Scanner(System.in);
     
+    /**
+     * @return the color
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * @param color the color to set
+     */
     public void setColor(String color) {
         this.color = color;
-    }
-    
+    }    
 }

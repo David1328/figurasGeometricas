@@ -7,9 +7,11 @@ package model;
 
 /**
  *
- * @author David
+ * @author Santigo Bernal
+ * @author David Quintero
+ * @version 1.0.0
  */
-public class Trapecio extends FigurasGeometricas{
+public class Trapecio extends FigurasGeometricas{    
     
     private float baseMenor;
     private float baseMayor;
@@ -27,19 +29,19 @@ public class Trapecio extends FigurasGeometricas{
     
     @Override
     public float area() {
-        if(validarNumeros(baseMenor, baseMayor, altura)){
+        if(validarNumeros(getBaseMenor(), getBaseMayor(), getAltura())){
             System.out.println("Valores no validos");
             return 0;
         }
-        return ((this.baseMayor+this.baseMenor)/2)*this.altura;
+        return ((this.getBaseMayor()+this.getBaseMenor())/2)*this.getAltura();
     }
 
     @Override
     public String imprimir() {
-        if(validarNumeros(baseMenor, baseMayor, altura)==true){
+        if(validarNumeros(getBaseMenor(), getBaseMayor(), getAltura())==true){
             return "Datos no validos";
         }
-        return "Datos del trapecio:\nBase Mayor:"+this.baseMayor+"\nBase Menor:"+this.baseMenor+"\nAltura:"+this.altura+"\nArea:"+this.area();
+        return "Datos del trapecio:\nBase Mayor:"+this.getBaseMayor()+"\nBase Menor:"+this.getBaseMenor()+"\nAltura:"+this.getAltura()+"\nArea:"+this.area();
     }    
     
     public boolean validarNumeros(float baseMenor, float baseMayor, float altura){
@@ -54,36 +56,53 @@ public class Trapecio extends FigurasGeometricas{
     @Override
     public void perdirDatos() {
         System.out.println("Ingresar la base mayor");
-        this.baseMayor = entrada.nextFloat();
+        this.setBaseMayor(entrada.nextFloat());
         System.out.println("Ingresar la base menor");
-        this.baseMenor = entrada.nextFloat();
+        this.setBaseMenor(entrada.nextFloat());
         System.out.println("Ingresar la altura");
-        this.altura = entrada.nextFloat();
-        if(validarNumeros(baseMenor, baseMayor, altura)){
+        this.setAltura(entrada.nextFloat());
+        if(validarNumeros(getBaseMenor(), getBaseMayor(), getAltura())){
             System.out.println("Datos no validos");
         }
     }
-    
+    /**
+     * @return the baseMenor
+     */
     public float getBaseMenor() {
         return baseMenor;
     }
 
+    /**
+     * @param baseMenor the baseMenor to set
+     */
     public void setBaseMenor(float baseMenor) {
         this.baseMenor = baseMenor;
     }
 
+    /**
+     * @return the baseMayor
+     */
     public float getBaseMayor() {
         return baseMayor;
     }
 
+    /**
+     * @param baseMayor the baseMayor to set
+     */
     public void setBaseMayor(float baseMayor) {
         this.baseMayor = baseMayor;
     }
 
+    /**
+     * @return the altura
+     */
     public float getAltura() {
         return altura;
     }
 
+    /**
+     * @param altura the altura to set
+     */
     public void setAltura(float altura) {
         this.altura = altura;
     }

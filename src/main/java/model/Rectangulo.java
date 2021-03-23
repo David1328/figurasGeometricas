@@ -7,7 +7,9 @@ package model;
 
 /**
  *
- * @author asantibo
+ * @author Santigo Bernal
+ * @author David Quintero
+ * @version 1.0.0
  */
 public class Rectangulo extends FigurasGeometricas {
 
